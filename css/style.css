@@ -1,8 +1,13 @@
 body {
   font-family: 'Roboto Slab', serif; }
 
+.wrap {
+  max-width: 1173px;
+  margin: 0 auto; }
+
 .page-main {
-  background: url(../images/bg.png) center center/cover no-repeat; }
+  background: url(../images/bg.png) center center/cover no-repeat;
+  color: #fff; }
 
 .header {
   display: -webkit-box;
@@ -13,7 +18,10 @@ body {
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  max-width: 1173px;
+  margin: 0 auto;
+  padding-top: 57px; }
   .header__logo {
     background: url(../images/logo.svg) center center/cover no-repeat;
     display: block;
@@ -26,8 +34,49 @@ body {
     display: flex;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
-            justify-content: flex-end; }
+            justify-content: flex-end;
+    font-family: 'Open Sans', sans-serif; }
     .header-list__item {
-      margin-left: 20px; }
+      margin-left: 20px;
+      padding-bottom: 5px;
+      border-bottom: 3px solid transparent;
+      -webkit-transition: 0.3s;
+      transition: 0.3s; }
+      .header-list__item:hover {
+        border-bottom: 3px solid #65E496; }
+    .header-list__item.active {
+      border-bottom: 3px solid #65E496; }
+    .header-list__link {
+      color: #fff;
+      text-decoration: none;
+      letter-spacing: 0.5px; }
+
+.block-text__name {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px; }
+.block-text__title {
+  font-size: 48px; }
+  .block-text__title span {
+    display: block;
+    color: #65E496;
+    font-size: 18px; }
+.block-text p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px; }
+.block-text__btn {
+  display: block;
+  background-color: #65E496;
+  color: #fff;
+  text-decoration: none;
+  max-width: 251px;
+  border-radius: 3px;
+  text-align: center;
+  font-size: 18px; }
+
+.block-book-demo {
+  display: block;
+  width: 446px;
+  height: 640px;
+  background: url(../images/book.svg) center center/cover no-repeat; }
 
 /*# sourceMappingURL=style.css.map */

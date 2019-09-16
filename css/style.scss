@@ -1,14 +1,26 @@
+$light-color: #fff;
+$accent-color: #65E496;
+
 body {
     font-family: 'Roboto Slab', serif;
+}
+
+.wrap {
+    max-width: 1173px;
+    margin: 0 auto;   
 }
   
 .page-main {
     background: url(../images/bg.png) center center/cover no-repeat;
+    color: $light-color;
 }
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1173px;
+    margin: 0 auto;
+    padding-top: 57px;
     &__logo {
         background: url(../images/logo.svg) center center/cover no-repeat;
         display: block;
@@ -19,8 +31,60 @@ body {
         list-style-type: none;
         display: flex;
         justify-content: flex-end;
+        font-family: 'Open Sans', sans-serif;
             &__item {
                 margin-left: 20px;
+                padding-bottom: 5px;
+                border-bottom: 3px solid transparent;
+                transition: 0.3s;
+                &:hover {
+                    border-bottom: 3px solid $accent-color;
+                }
             }
+        &__item.active {
+            border-bottom: 3px solid $accent-color;
+        }
+        &__link {
+            color: $light-color;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+        }
+    }
+}
+ 
+.block-text {
+    &__name {
+        font-family: 'Open Sans', sans-serif;  
+        font-size: 18px;
+    }
+    &__title {
+        font-size: 48px;
+        span {
+            display: block;
+            color: $accent-color;
+            font-size: 18px;
+        }
+    }
+    p {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 15px;
+    }
+    &__btn {
+        display: block;
+        background-color: $accent-color;
+        color: $light-color;
+        text-decoration: none;
+        max-width: 251px;
+        border-radius: 3px;
+        text-align: center;
+        font-size: 18px;
+    }
+}
+.block-book {
+    &-demo {
+        display: block;
+        width: 446px;
+        height: 640px;
+        background: url(../images/book.svg) center center/cover no-repeat;  
     }
 }
