@@ -1,3 +1,33 @@
+body {
+  font-family: 'Roboto Slab', serif; }
 
+.page-main {
+  background: url(../images/bg.png) center center/cover no-repeat; }
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .header__logo {
+    background: url(../images/logo.svg) center center/cover no-repeat;
+    display: block;
+    width: 139px;
+    height: 31px; }
+  .header-list {
+    list-style-type: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
+    .header-list__item {
+      margin-left: 20px; }
 
 /*# sourceMappingURL=style.css.map */
