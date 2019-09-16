@@ -13,6 +13,7 @@ body {
 .page-main {
     background: url(../images/bg.png) center center/cover no-repeat;
     color: $light-color;
+    padding-bottom: 163px;
 }
 .header {
     display: flex;
@@ -21,6 +22,7 @@ body {
     max-width: 1173px;
     margin: 0 auto;
     padding-top: 57px;
+    padding-bottom: 166px;
     &__logo {
         background: url(../images/logo.svg) center center/cover no-repeat;
         display: block;
@@ -53,21 +55,32 @@ body {
 }
  
 .block-text {
+    flex-basis: calc(95.5% - 446px);
     &__name {
         font-family: 'Open Sans', sans-serif;  
         font-size: 18px;
+        letter-spacing: 0.7px;
+        margin-top: 0;
     }
     &__title {
         font-size: 48px;
+        letter-spacing: 1.8px;
+        margin-bottom: 42px;
+        margin-top: 10px;
         span {
             display: block;
             color: $accent-color;
             font-size: 18px;
+            letter-spacing: 0.9px;
+            margin-top: 10px;
         }
     }
-    p {
+    &__description {
         font-family: 'Open Sans', sans-serif;
         font-size: 15px;
+        line-height: 24px;
+        margin-bottom: 45px;
+        letter-spacing: 0.7px;
     }
     &__btn {
         display: block;
@@ -78,13 +91,25 @@ body {
         border-radius: 3px;
         text-align: center;
         font-size: 18px;
+        padding: 15px 0px;
+        margin-bottom: 10px;
+        letter-spacing: 0.7px;
+    }
+    small {
+        font-family: 'Open Sans', sans-serif;
+        font-style: italic;
+        font-size: 12px;
+        letter-spacing: 0.1px;
     }
 }
 .block-book {
+    display: flex;
+    justify-content: space-between;
     &-demo {
         display: block;
         width: 446px;
         height: 640px;
-        background: url(../images/book.svg) center center/cover no-repeat;  
+        background: url(../images/book.svg) center center/cover no-repeat; 
+        flex-basis: 446px;
     }
 }

@@ -7,7 +7,8 @@ body {
 
 .page-main {
   background: url(../images/bg.png) center center/cover no-repeat;
-  color: #fff; }
+  color: #fff;
+  padding-bottom: 163px; }
 
 .header {
   display: -webkit-box;
@@ -21,7 +22,8 @@ body {
           align-items: center;
   max-width: 1173px;
   margin: 0 auto;
-  padding-top: 57px; }
+  padding-top: 57px;
+  padding-bottom: 166px; }
   .header__logo {
     background: url(../images/logo.svg) center center/cover no-repeat;
     display: block;
@@ -51,32 +53,62 @@ body {
       text-decoration: none;
       letter-spacing: 0.5px; }
 
-.block-text__name {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 18px; }
-.block-text__title {
-  font-size: 48px; }
-  .block-text__title span {
+.block-text {
+  -ms-flex-preferred-size: calc(95.5% - 446px);
+      flex-basis: calc(95.5% - 446px); }
+  .block-text__name {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.7px;
+    margin-top: 0; }
+  .block-text__title {
+    font-size: 48px;
+    letter-spacing: 1.8px;
+    margin-bottom: 42px;
+    margin-top: 10px; }
+    .block-text__title span {
+      display: block;
+      color: #65E496;
+      font-size: 18px;
+      letter-spacing: 0.9px;
+      margin-top: 10px; }
+  .block-text__description {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    line-height: 24px;
+    margin-bottom: 45px;
+    letter-spacing: 0.7px; }
+  .block-text__btn {
     display: block;
-    color: #65E496;
-    font-size: 18px; }
-.block-text p {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 15px; }
-.block-text__btn {
-  display: block;
-  background-color: #65E496;
-  color: #fff;
-  text-decoration: none;
-  max-width: 251px;
-  border-radius: 3px;
-  text-align: center;
-  font-size: 18px; }
+    background-color: #65E496;
+    color: #fff;
+    text-decoration: none;
+    max-width: 251px;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 18px;
+    padding: 15px 0px;
+    margin-bottom: 10px;
+    letter-spacing: 0.7px; }
+  .block-text small {
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    font-size: 12px;
+    letter-spacing: 0.1px; }
 
-.block-book-demo {
-  display: block;
-  width: 446px;
-  height: 640px;
-  background: url(../images/book.svg) center center/cover no-repeat; }
+.block-book {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .block-book-demo {
+    display: block;
+    width: 446px;
+    height: 640px;
+    background: url(../images/book.svg) center center/cover no-repeat;
+    -ms-flex-preferred-size: 446px;
+        flex-basis: 446px; }
 
 /*# sourceMappingURL=style.css.map */
