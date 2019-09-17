@@ -25,6 +25,9 @@ h3 {
 .page {
     padding-top: 160px;
     padding-bottom: 160px;
+    &_center {
+        text-align: center;
+    }
     &_gray {
         background-color: $bg-light-color;
     }
@@ -39,6 +42,29 @@ h3 {
         text-align: center;
         font-size: 18px;
         letter-spacing: 0.9px;
+    }
+    &__btn {
+        background: linear-gradient(to top left, #65e49c, #65e4af);
+        color: $light-color;
+        text-decoration: none;
+        border-radius: 3px;
+        text-align: center;
+        font-size: 18px;
+        padding: 14px 45px;
+        margin-top: 28px;
+        letter-spacing: 0.7px;
+        position: relative;
+ /*        &::before {
+            content: '';
+            display: block;
+            height: 20px;
+            width: 100%;
+            background-color: #b2f1be;
+            position: absolute;
+            z-index: -1;
+            bottom: -2px;
+            border-radius: 3px;
+        } */
     }
 }
 .header {
@@ -96,13 +122,13 @@ h3 {
         font-size: 48px;
         letter-spacing: 1.8px;
         margin-bottom: 42px;
-        margin-top: 10px;
+        margin-top: 43px;
         span {
             display: block;
             color: $accent-color;
             font-size: 18px;
             letter-spacing: 0.9px;
-            margin-top: 5px;
+            margin-top: 24px;
             margin-bottom: -4px;
         }
     }
@@ -110,12 +136,12 @@ h3 {
         font-family: 'Open Sans', sans-serif;
         font-size: 15px;
         line-height: 24px;
-        margin-bottom: 25px;
+        margin-bottom: 20px;
         letter-spacing: 0.7px;
     }
     &__btn {
         display: block;
-        background-color: $accent-color;
+        background: linear-gradient(to top left, #65e49c, #65e4af);
         color: $light-color;
         text-decoration: none;
         max-width: 251px;
@@ -126,6 +152,18 @@ h3 {
         margin-bottom: 10px;
         margin-top: 47px;
         letter-spacing: 0.7px;
+        position: relative;
+        &::before {
+            content: '';
+            display: block;
+            height: 20px;
+            width: 100%;
+            background-color: #b2f1be;
+            position: absolute;
+            z-index: -1;
+            bottom: -2px;
+            border-radius: 3px;
+        }
     }
     small {
         font-family: 'Open Sans', sans-serif;
@@ -139,11 +177,39 @@ h3 {
     justify-content: flex-start;
     &-demo {
         display: block;
+        position: relative;
         width: 446px;
         height: 640px;
         background-image: url(../img/book.svg); 
         background-repeat: no-repeat;
         flex-basis: 500px;
+        &__title {
+            font-size: 36px;
+            text-transform: uppercase;
+            position: absolute;
+            left: 131px;
+            top: 90px;
+            letter-spacing: 0.9px;
+            span {
+                font-size: 14px;
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 400;
+                text-transform: initial;
+                color: $accent-color;
+                display: block;
+                letter-spacing: 0.5px;
+                margin-top: 10px;
+            }
+        }
+        &__author {
+            font-size: 14px;
+            font-family: 'Open Sans', sans-serif;
+            color: $accent-color; 
+            position: absolute;
+            left: 86px;
+            bottom: 38px;
+            letter-spacing: 0.7px;
+        }
     }
 }
 .block-author {
@@ -232,7 +298,7 @@ h3 {
             }
         }
         &__btn {
-            background-color: $accent-color;
+            background: linear-gradient(to top left, #65e49c, #65e4af);
             color: $light-color;
             text-decoration: none;
             max-width: 251px;
@@ -244,6 +310,18 @@ h3 {
             margin-bottom: 19px;
             margin-top: 28px;
             letter-spacing: 0.7px;
+            position: relative;
+            &::before {
+                content: '';
+                display: block;
+                height: 20px;
+                width: 100%;
+                background-color: #b2f1be;
+                position: absolute;
+                z-index: -1;
+                bottom: -2px;
+                border-radius: 3px;
+            }
         }
     }
     &-social {
@@ -269,6 +347,57 @@ h3 {
                     color: $accent-color;
                 }
             }
+        }
+    }
+}
+.block-product {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 60px;
+    margin-top: 82px;
+    &-item {
+        text-align: center;
+        margin: 0 auto;
+    }
+    &-demo {
+        display: block;
+        position: relative;
+        flex-basis: 30%;
+        height: 410px;
+        background-image: url(../img/book.svg); 
+        background-repeat: no-repeat;
+        border-radius: 5px;
+        text-align: center;
+        margin: 0 auto;
+        margin-left: 58px;
+        &__title {
+            font-size: 27px;
+            text-transform: uppercase;
+            position: absolute;
+            left: 54px;
+            top: 50px;
+            letter-spacing: 0.9px;
+            color: $light-color;
+            span {
+                font-size: 12px;
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 100;
+                text-transform: initial;
+                color: $accent-color;
+                display: block;
+                letter-spacing: 0.5px;
+                margin-top: 10px;
+            }
+        }
+      
+        &__author {
+            font-size: 12px;
+            font-family: 'Open Sans', sans-serif;
+            color: $accent-color; 
+            position: absolute;
+            left: 80px;
+            bottom: 16px;
+            letter-spacing: 0.7px;
         }
     }
 }
