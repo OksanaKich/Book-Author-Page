@@ -11,9 +11,12 @@ body {
 }
   
 .page-main {
-    background: url(../images/bg.png) center center/cover no-repeat;
+    background: url(../img/bg.png) center center/cover no-repeat;
     color: $light-color;
     padding-bottom: 163px;
+}
+.page {
+    padding-top: 160px;
 }
 .header {
     display: flex;
@@ -24,7 +27,7 @@ body {
     padding-top: 57px;
     padding-bottom: 166px;
     &__logo {
-        background: url(../images/logo.svg) center center/cover no-repeat;
+        background: url(../img/logo.svg) center center/cover no-repeat;
         display: block;
         width: 139px;
         height: 31px;
@@ -55,13 +58,17 @@ body {
 }
  
 .block-text {
-    flex-basis: calc(95.5% - 446px);
+    flex-basis: calc(93% - 500px);
     &__name {
         font-family: 'Open Sans', sans-serif;  
         font-size: 18px;
         letter-spacing: 0.7px;
         margin-top: 0;
     }
+    &__name-top {
+        margin-top: 179px;
+        
+    } 
     &__title {
         font-size: 48px;
         letter-spacing: 1.8px;
@@ -72,14 +79,15 @@ body {
             color: $accent-color;
             font-size: 18px;
             letter-spacing: 0.9px;
-            margin-top: 10px;
+            margin-top: 5px;
+            margin-bottom: -4px;
         }
     }
     &__description {
         font-family: 'Open Sans', sans-serif;
         font-size: 15px;
         line-height: 24px;
-        margin-bottom: 45px;
+        margin-bottom: 25px;
         letter-spacing: 0.7px;
     }
     &__btn {
@@ -93,6 +101,7 @@ body {
         font-size: 18px;
         padding: 15px 0px;
         margin-bottom: 10px;
+        margin-top: 47px;
         letter-spacing: 0.7px;
     }
     small {
@@ -104,12 +113,30 @@ body {
 }
 .block-book {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     &-demo {
         display: block;
         width: 446px;
         height: 640px;
-        background: url(../images/book.svg) center center/cover no-repeat; 
-        flex-basis: 446px;
+        background-image: url(../img/book.svg); 
+        background-repeat: no-repeat;
+        flex-basis: 500px;
+    }
+}
+.block-author {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.block-ava {
+    position: relative;
+    &__svg {
+        position: absolute;
+        z-index: -1;
+        right: 0;
+    }
+    &__img {
+        margin-top: 49px;
+        margin-right: 44px; 
     }
 }
