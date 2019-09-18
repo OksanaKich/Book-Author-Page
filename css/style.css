@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: 'Roboto Slab', serif;
   font-size: 15px;
@@ -411,5 +412,103 @@ h3 {
       text-transform: uppercase;
       letter-spacing: 0.9px;
       color: #65E496; }
+
+.block-blog {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 84px; }
+  .block-blog h4 {
+    font-size: 18px;
+    margin-top: 16px;
+    margin-bottom: 4px;
+    letter-spacing: 1px; }
+  .block-blog-img {
+    width: 369px;
+    height: 224px;
+    /*         overflow: hidden; Якщо картинка велика чи різного розміру, то позиціюється так
+            position: relative;
+            img {
+                width: 369px;
+                height: 224px;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, 050%);
+                object-fit: cover;
+            } */ }
+  .block-blog-info {
+    font-size: 15px; }
+    .block-blog-info__link {
+      display: inline; }
+    .block-blog-info a {
+      color: #65E496;
+      text-decoration: none;
+      display: inline; }
+    .block-blog-info span {
+      display: inline; }
+  .block-blog__desc {
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0.7px; }
+  .block-blog + .page__btn {
+    display: block;
+    margin: 84px auto 0;
+    max-width: 201px;
+    margin-top: 67px; }
+
+.block-letter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .block-letter-item {
+    -ms-flex-preferred-size: 49%;
+        flex-basis: 49%; }
+  .block-letter__title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+    margin-top: 2px; }
+  .block-letter__text {
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0.7px; }
+  .block-letter__input {
+    width: 100%;
+    background-color: #44444F;
+    border: none;
+    color: #9191b5;
+    padding: 16px 15px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border-radius: 2px;
+    margin-top: -5px; }
+    .block-letter__input:focus {
+      outline: none;
+      color: #fff; }
+  .block-letter__btn {
+    background: -webkit-gradient(linear, right bottom, left top, from(#65e49c), to(#65e4af));
+    background: linear-gradient(to top left, #65e49c, #65e4af);
+    border: none;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 2px;
+    text-align: center;
+    font-size: 18px;
+    padding: 14px 0;
+    margin-top: 22px;
+    letter-spacing: 0.7px;
+    -webkit-box-shadow: 0 -3px #b2f1be inset;
+            box-shadow: 0 -3px #b2f1be inset;
+    display: block;
+    width: 100%;
+    outline: none; }
 
 /*# sourceMappingURL=style.css.map */
