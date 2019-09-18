@@ -511,4 +511,54 @@ h3 {
     width: 100%;
     outline: none; }
 
+.footer {
+  background-color: #44444F;
+  color: #9191b5;
+  padding: 136px 0; }
+
+.block-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .block-footer-item {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+    margin: 0 -90px;
+    /* При такому маргіні немає зміщення при звуженні (..) */ }
+    .block-footer-item:first-child {
+      margin: 0; }
+  .block-footer__logo {
+    background-image: url(../img/logo2.svg);
+    background-repeat: no-repeat;
+    display: block;
+    width: 139px;
+    height: 31px; }
+  .block-footer__copy {
+    margin-top: 34px; }
+  .block-footer__title {
+    font-size: 18px;
+    color: #65E496;
+    text-transform: uppercase;
+    letter-spacing: 1px; }
+  .block-footer__list {
+    list-style-type: none;
+    padding-left: 0; }
+    .block-footer__list--height {
+      line-height: 28px;
+      list-style-type: none;
+      padding-left: 0; }
+  .block-footer__social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style-type: none;
+    padding-left: 0; }
+    .block-footer__social > li {
+      margin-right: 10px; }
+      .block-footer__social > li > a {
+        color: #65E496; }
+
 /*# sourceMappingURL=style.css.map */

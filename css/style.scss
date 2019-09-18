@@ -532,3 +532,55 @@ h3 {
         outline: none;
     }
 }
+.footer {
+   background-color: $bg-dark-color;
+   color: $gray-color;
+   padding: 136px 0;
+}
+.block-footer {
+    display: flex;
+    justify-content: space-between;
+    &-item {
+        flex-basis: 30%;
+        margin: 0 -90px; /* При такому маргіні немає зміщення при звуженні (..) */
+        &:first-child {
+            margin: 0;  
+        }
+    }
+    &__logo {
+        background-image: url(../img/logo2.svg);
+        background-repeat: no-repeat;
+        display: block;
+        width: 139px;
+        height: 31px;
+    }
+    &__copy {
+        margin-top: 34px;
+    }
+    &__title {
+        font-size: 18px;
+        color: $accent-color;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    &__list {
+        list-style-type: none;
+        padding-left: 0;
+        &--height {
+            line-height: 28px;
+            list-style-type: none;
+            padding-left: 0;
+        }
+    }
+    &__social {
+        display: flex;
+        list-style-type: none;
+        padding-left: 0;
+        &>li {
+            margin-right: 10px;
+            &>a {
+                color: $accent-color;
+            }
+        }
+    }
+}
