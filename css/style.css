@@ -92,6 +92,9 @@ h3 {
 .block-text {
   -ms-flex-preferred-size: calc(93% - 500px);
       flex-basis: calc(93% - 500px); }
+  .block-text--width {
+    -ms-flex-preferred-size: calc(93% - 520px);
+        flex-basis: calc(93% - 520px); }
   .block-text__name {
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
@@ -141,6 +144,39 @@ h3 {
     font-style: italic;
     font-size: 12px;
     letter-spacing: 0.1px; }
+  .block-text-item {
+    margin-bottom: 55px; }
+    .block-text-item__date {
+      font-size: 15px;
+      font-family: 'Open Sans', sans-serif;
+      letter-spacing: 0.7px;
+      margin-bottom: 0px;
+      margin-top: 45px; }
+    .block-text-item__title {
+      font-size: 18px;
+      letter-spacing: 0.9px;
+      margin-bottom: 0;
+      margin-top: 0; }
+    .block-text-item__desc {
+      font-size: 15px;
+      font-family: 'Open Sans', sans-serif;
+      letter-spacing: 0.7px; }
+    .block-text-item__btn {
+      display: block;
+      background: -webkit-gradient(linear, right bottom, left top, from(#65e49c), to(#65e4af));
+      background: linear-gradient(to top left, #65e49c, #65e4af);
+      color: #fff;
+      text-decoration: none;
+      max-width: 138px;
+      border-radius: 3px;
+      text-align: center;
+      font-size: 18px;
+      padding: 11px 0 15px 0px;
+      margin-bottom: 10px;
+      margin-top: 24px;
+      letter-spacing: 0.7px;
+      -webkit-box-shadow: 0 -3px #b2f1be inset;
+              box-shadow: 0 -3px #b2f1be inset; }
 
 .block-book {
   display: -webkit-box;
@@ -199,9 +235,16 @@ h3 {
     position: absolute;
     z-index: -1;
     right: 0; }
+  .block-ava__svg--left {
+    right: inherit;
+    left: 0; }
   .block-ava__img {
     margin-top: 49px;
     margin-right: 44px; }
+  .block-ava__img--left {
+    margin-top: 49px;
+    margin-left: 51px;
+    margin-right: 0; }
 
 .block-counter {
   display: -webkit-box;

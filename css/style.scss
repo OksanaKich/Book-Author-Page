@@ -98,6 +98,9 @@ h3 {
  
 .block-text {
     flex-basis: calc(93% - 500px);
+    &--width {
+        flex-basis: calc(93% - 520px);
+    }
     &__name {
         font-family: 'Open Sans', sans-serif;  
         font-size: 18px;
@@ -142,7 +145,6 @@ h3 {
         margin-bottom: 10px;
         margin-top: 47px;
         letter-spacing: 0.7px;
-        // border-bottom: 2px solid #b2f1be;
         box-shadow: 0 -3px #b2f1be inset;
     }
     &__btn--main {
@@ -153,6 +155,42 @@ h3 {
         font-style: italic;
         font-size: 12px;
         letter-spacing: 0.1px;
+    }
+    &-item {
+        margin-bottom: 55px;
+        &__date {
+            font-size: 15px;
+            font-family: 'Open Sans', sans-serif;
+            letter-spacing: 0.7px;
+            margin-bottom: 0px;
+            margin-top: 45px;
+        }
+        &__title {
+            font-size: 18px;
+            letter-spacing: 0.9px;
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+        &__desc {
+            font-size: 15px;
+            font-family: 'Open Sans', sans-serif;
+            letter-spacing: 0.7px;
+        }
+        &__btn {
+            display: block;
+            background: linear-gradient(to top left, #65e49c, #65e4af);
+            color: $light-color;
+            text-decoration: none;
+            max-width: 138px;
+            border-radius: 3px;
+            text-align: center;
+            font-size: 18px;
+            padding: 11px 0 15px 0px;
+            margin-bottom: 10px;
+            margin-top: 24px;
+            letter-spacing: 0.7px;
+            box-shadow: 0 -3px #b2f1be inset;
+        }
     }
 }
 .block-book {
@@ -207,9 +245,18 @@ h3 {
         z-index: -1;
         right: 0;
     }
+    &__svg--left {
+        right: inherit;
+        left: 0;
+    }
     &__img {
         margin-top: 49px;
         margin-right: 44px; 
+    }
+    &__img--left {
+        margin-top: 49px;
+        margin-left: 51px;
+        margin-right: 0;
     }
 }
 .block-counter {
