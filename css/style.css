@@ -18,11 +18,15 @@ h3 {
 
 .page {
   padding-top: 160px;
-  padding-bottom: 160px; }
+  padding-bottom: 160px;
+  position: relative; }
   .page_center {
     text-align: center; }
   .page_gray {
     background-color: #F5F6FA; }
+  .page_top {
+    margin-top: 100px;
+    /* Мождифікатор, бо svg налазить на page-author */ }
   .page__title {
     font-size: 48px;
     text-align: center;
@@ -46,6 +50,12 @@ h3 {
     letter-spacing: 0.7px;
     -webkit-box-shadow: 0 -3px #b2f1be inset;
             box-shadow: 0 -3px #b2f1be inset; }
+  .page__svg {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    /*  max-height: 850px; */
+    z-index: -1; }
 
 .header {
   display: -webkit-box;
@@ -562,7 +572,10 @@ h3 {
         color: #65E496; }
 
 .block-carousel {
-  text-align: center; }
+  text-align: center;
+  margin-top: 80px;
+  /* Забрати вже для ноута */
+  margin-bottom: 0; }
   .block-carousel h3 {
     color: #65E496;
     margin-bottom: 4px;
@@ -573,7 +586,8 @@ h3 {
     max-width: 760px;
     line-height: 27px;
     letter-spacing: 0.75px;
-    margin: 0 auto; }
+    margin: 0 auto;
+    margin-bottom: 20px; }
   .block-carousel__expert {
     margin-bottom: 32px; }
   .block-carousel-ava {
@@ -637,5 +651,7 @@ h3 {
   .slick-dots > li.slick-active > button {
     width: 38px;
     border-radius: 10px; }
+
+/* Зробити для svg для великого екрану! */
 
 /*# sourceMappingURL=style.css.map */
