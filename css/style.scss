@@ -16,6 +16,8 @@ h3 {
 .wrap {
     max-width: 1173px;
     margin: 0 auto;   
+    padding-left: 15px;
+    padding-right: 15px;
 }
   
 .page-main {
@@ -27,6 +29,10 @@ h3 {
     padding-top: 160px;
     padding-bottom: 160px;
     position: relative;
+    @media (max-width: 1100px){
+        padding-top: 100px;
+        padding-bottom: 100px; 
+    }
     &_center {
         text-align: center;
     }
@@ -34,7 +40,7 @@ h3 {
         background-color: $bg-light-color;
     }
     &_top {
-        margin-top: 100px; /* Мождифікатор, бо svg налазить на page-author */
+        margin-top: 0; /* Модифікатор, бо svg налазить на page-author */
     }
     &__title {
         font-size: 48px;
@@ -66,7 +72,21 @@ h3 {
         top: 0;
         width: 100%;
        /*  max-height: 850px; */
-        z-index: -1;   
+        z-index: -1;  
+        min-height: 694px; 
+        @media (max-width: 1100px) {
+            display: none;
+        }
+    }
+    &-carousel {
+        padding-top: 240px;
+        @media (max-width: 1366px){
+            padding-top: 100px;
+
+        } 
+        @media (max-width: 1100px) {
+            background-color: $bg-dark-color;
+        }  
     }
 }
 .header {
@@ -75,8 +95,13 @@ h3 {
     align-items: center;
     max-width: 1173px;
     margin: 0 auto;
-    padding-top: 57px;
-    padding-bottom: 166px;
+    padding: 57px 15px 166px 15px;
+    @media(max-width: 1020px) {
+        padding: 57px 15px 100px 15px;
+    }
+    @media (max-width: 920px){
+        flex-direction: column;
+    }
     &__logo {
         background: url(../img/logo.svg) center center/cover no-repeat;
         display: block;
@@ -110,14 +135,21 @@ h3 {
  
 .block-text {
     flex-basis: calc(93% - 500px);
+    @media(max-width: 1020px) {
+        flex-basis: calc(93% - 315px);
+    }
     &--width {
         flex-basis: calc(93% - 520px);
+        @media(max-width: 1020px) {
+            flex-basis: calc(93% - 315px); 
+        }
     }
     &__name {
         font-family: 'Open Sans', sans-serif;  
         font-size: 18px;
         letter-spacing: 0.7px;
         margin-top: 0;
+        margin-bottom: -16px;
     }
     &__name_top {
         margin-top: 11px;
@@ -128,13 +160,15 @@ h3 {
         letter-spacing: 1.8px;
         margin-bottom: 42px;
         margin-top: 43px;
+        line-height: 53px;
         span {
             display: block;
             color: $accent-color;
             font-size: 18px;
             letter-spacing: 0.9px;
-            margin-top: 24px;
-            margin-bottom: -4px;
+            margin-top: -5px;
+            margin-bottom: -17px;
+            line-height: 24px;
         }
     }
     &__description {
@@ -154,13 +188,17 @@ h3 {
         text-align: center;
         font-size: 18px;
         padding: 11px 0 15px 0px;
-        margin-bottom: 10px;
-        margin-top: 47px;
+        margin-bottom: 15px;
+        margin-top: 50px;
         letter-spacing: 0.7px;
         box-shadow: 0 -3px #b2f1be inset;
     }
     &__btn--main {
         box-shadow: 0 -2px #59ba88 inset;
+        @media(max-width: 1020px) {
+            margin: 47px auto;
+            margin-bottom: 0;
+        }
     }
     small {
         font-family: 'Open Sans', sans-serif;
@@ -208,6 +246,10 @@ h3 {
 .block-book {
     display: flex;
     justify-content: flex-start;
+    @media(max-width: 1020px) {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
     &-demo {
         display: block;
         position: relative;
@@ -215,7 +257,13 @@ h3 {
         height: 640px;
         background-image: url(../img/book.svg); 
         background-repeat: no-repeat;
+        background-position: center;
         flex-basis: 500px;
+        @media(max-width: 1020px){
+            flex-basis: 500px;
+            margin: 0 auto;
+            margin-top: 57px;
+        }
         &__title {
             font-size: 36px;
             text-transform: uppercase;
@@ -256,6 +304,10 @@ h3 {
         position: absolute;
         z-index: -1;
         right: 0;
+        @media(max-width: 1020px) {
+            width: 300px;
+            height: 412px;
+        }
     }
     &__svg--left {
         right: inherit;
@@ -264,6 +316,9 @@ h3 {
     &__img {
         margin-top: 49px;
         margin-right: 44px; 
+        @media(max-width: 1020px){
+            width: 300px;
+        }
     }
     &__img--left {
         margin-top: 49px;
@@ -275,11 +330,17 @@ h3 {
     display: flex;
     justify-content: space-around;
     margin-top: 159px;
+    @media(max-width:750px){
+        flex-direction: column;
+    }
     p {
         font-family: 'Open Sans', sans-serif;
         text-align: center;
         font-size: 18px;
         letter-spacing: 0.8px;
+        @media(max-width:750px) {
+            margin-bottom: 80px;
+        }
         span {
             font-family: 'Roboto Slab', serif;
             display: block;
@@ -295,25 +356,38 @@ h3 {
     justify-content: space-between;
     flex-wrap: wrap; 
     margin-top: 82px;
+    @media(max-width:1020px){
+        flex-direction: column;
+        margin: 82 auto 0;
+        max-width: 750px;
+    }
     h3 {
         margin-bottom: 20px;
         letter-spacing: 1.2px;
     }
     &-text {
-        flex-basis: 41%;
+        flex-basis: calc(100% - 690px);
+        @media(max-width:1020px){
+            flex-basis: 100%;
+        }
         &__desc {
             font-family: 'Open Sans', sans-serif;
-            letter-spacing: 0.6px;  
+            letter-spacing: 0.7px;  
         }
     }
     &-table {
-        flex-basis: 49%;  
+        flex-basis: 585px;
+        @media(max-width:1020px){
+            flex-basis: 100%;
+            margin-top: 40px;  
+        }
         &__list {
             margin: 0;
             padding: 0;
             counter-reset: list;
             column-count: 2;
             margin-top: 25px;
+            column-gap: 19px; 
             &>li {
                 position: relative;
                 padding-left: 37px;
@@ -330,13 +404,26 @@ h3 {
                     font-size: 15px;
                     position: absolute;
                     left: 0;
-                    top: 1px;
+                    top: calc(50% - 10px);
                     line-height: 22px;
                     background-color: #58c0ad;
                     color: $light-color;
                     padding: 0px 7px;
                     
                 }
+            }
+        }
+        &__list_next {
+            counter-reset: list 10;
+            position: relative;
+            &::before {
+                content: '';
+                width: 100px;
+                height: 2px;
+                background-color: #58c0ad;
+                display: block;
+                position: absolute;
+                top: -16px;
             }
         }
         &__btn {
@@ -354,6 +441,9 @@ h3 {
             letter-spacing: 0.7px;
             // border-bottom: 3px solid #b2f1be;
             box-shadow: 0 -3px #b2f1be inset;
+            &:focus {
+                outline: none;
+            }
         }
     }
     &-social {
@@ -387,6 +477,9 @@ h3 {
     justify-content: space-around;
     margin-bottom: 60px;
     margin-top: 82px;
+    @media(max-width: 1020px){
+        flex-direction: column;
+    }
     &-item {
         text-align: center;
         flex-basis: 30%;
@@ -432,6 +525,17 @@ h3 {
     &-text {
         margin-top: 36px;
         margin-bottom: 30px;
+        h3 {
+            margin-bottom: 17px;
+        }
+        p {
+            font-size: 15px;
+            max-width: 316px;
+            margin-bottom: 17px;
+            @media(max-width: 1020px){
+                margin: 0 auto 17px;
+            }
+        }
         a {
             text-decoration: none;
             font-size: 15px;
@@ -440,6 +544,17 @@ h3 {
             text-transform: uppercase;
             letter-spacing: 0.9px;
             color: $accent-color;
+            border-bottom: 3px solid transparent;
+            padding-bottom: 5px;
+            transition: 0.3s;
+            @media(max-width: 1020px){
+                display: block;
+                margin: 0 auto 50px;
+                min-width: 120px;
+            }
+            &:hover {
+                border-bottom: 3px solid $accent-color;
+            }
         }
     }
 }
@@ -447,6 +562,18 @@ h3 {
     display: flex;
     justify-content: space-between;
     margin-top: 84px;
+    @media(max-width: 900px){
+        flex-direction: column;
+        min-width: 600px;
+        margin: 85px auto 0;
+        text-align: center;
+    }
+    &-item {
+        flex-basis: 32%;
+        @media(max-width: 900px){
+            margin-bottom: 40px;
+        }
+    }
     h4 {
         font-size: 18px;
         margin-top: 16px;
@@ -454,7 +581,7 @@ h3 {
         letter-spacing: 1px;
     }
     &-img {
-        width: 369px;
+        width: 100%;
         height: 224px;
 /*         overflow: hidden; Якщо картинка велика чи різного розміру, то позиціюється так
         position: relative;
@@ -470,6 +597,10 @@ h3 {
     }
     &-info {
         font-size: 15px;
+       /*  display: flex;
+        justify-content: flex-start;
+        letter-spacing: 0.8px; */
+        margin-bottom: 12px;
         &__link {
             display: inline;
         }
@@ -497,8 +628,15 @@ h3 {
 .block-letter {
     display: flex;
     justify-content: space-between;
+    @media(max-width: 1020px) {
+        flex-direction: column;
+        text-align: center;
+    }
     &-item {
         flex-basis: 49%;
+        @media(max-width: 1020px) {
+            flex-basis: 100%;
+        }
     }
     &__title {
         font-size: 48px;
@@ -511,6 +649,9 @@ h3 {
         font-size: 15px;
         font-family: 'Open Sans', sans-serif;
         letter-spacing: 0.7px;
+        @media(max-width: 1020px) {
+            margin-bottom: 40px;
+        }
     }
     &__input {
         width: 100%;
@@ -521,6 +662,9 @@ h3 {
         box-sizing: border-box;
         border-radius: 2px;
         margin-top: -5px;
+        @media(max-width: 1020px) {
+            max-width: 500px;
+        }
         &:focus {
             outline: none;
             color: $light-color;
@@ -541,6 +685,10 @@ h3 {
         display: block;
         width: 100%;
         outline: none;
+        @media(max-width: 1020px) {
+            max-width: 500px;
+            margin: 21px auto 0;
+        }
     }
 }
 .footer {
