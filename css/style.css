@@ -290,6 +290,10 @@ h3 {
             flex-basis: 500px;
         margin: 0 auto;
         margin-top: 57px; } }
+    @media (max-width: 440px) {
+      .block-book-demo {
+        margin: 0 auto;
+        margin-left: -50px; } }
     .block-book-demo__title {
       font-size: 36px;
       text-transform: uppercase;
@@ -658,19 +662,10 @@ h3 {
     letter-spacing: 1px; }
   .block-blog-img {
     margin: 0 auto;
-    /*        width: 100%;
-           height: 224px; */
-    /*         overflow: hidden; /* Якщо картинка велика чи різного розміру, то позиціюється так 
-            position: relative;
-            img {
-                width: 369px;
-                height: 224px;
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, 050%);
-                object-fit: cover;
-            } */ }
+    max-width: 400px;
+    position: relative; }
+    .block-blog-img img {
+      margin: 0 auto; }
   .block-blog-info {
     font-size: 15px;
     /*         display: flex;
