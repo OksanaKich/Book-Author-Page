@@ -26,6 +26,10 @@ h3 {
     .page {
       padding-top: 100px;
       padding-bottom: 100px; } }
+  @media (max-width: 480px) {
+    .page {
+      padding-top: 50px;
+      padding-bottom: 50px; } }
   .page_center {
     text-align: center; }
   .page_gray {
@@ -37,7 +41,8 @@ h3 {
     font-size: 48px;
     text-align: center;
     margin-bottom: 25px;
-    letter-spacing: 2px; }
+    letter-spacing: 2px;
+    line-height: 1.1; }
   .page__subtitle {
     color: #65E496;
     text-align: center;
@@ -82,6 +87,7 @@ h3 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: relative;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -97,6 +103,11 @@ h3 {
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column; } }
+  @media (max-width: 850px) {
+    .header {
+      -webkit-box-align: initial;
+          -ms-flex-align: initial;
+              align-items: initial; } }
   .header__logo {
     background: url(../img/logo.svg) center center/cover no-repeat;
     display: block;
@@ -111,6 +122,9 @@ h3 {
         -ms-flex-pack: end;
             justify-content: flex-end;
     font-family: 'Open Sans', sans-serif; }
+    @media (max-width: 850px) {
+      .header-list {
+        display: none; } }
     .header-list__item {
       margin-left: 20px;
       padding-bottom: 5px;
@@ -125,6 +139,16 @@ h3 {
       color: #fff;
       text-decoration: none;
       letter-spacing: 0.5px; }
+
+.btn-menu {
+  display: none;
+  position: absolute;
+  right: 20px; }
+  @media (max-width: 850px) {
+    .btn-menu {
+      display: block;
+      width: 50px;
+      height: 50px; } }
 
 .block-text {
   -ms-flex-preferred-size: calc(93% - 500px);
@@ -159,7 +183,7 @@ h3 {
       color: #65E496;
       font-size: 18px;
       letter-spacing: 0.9px;
-      margin-top: -5px;
+      margin-top: 5px;
       margin-bottom: -17px;
       line-height: 24px; }
   .block-text__description {
@@ -180,10 +204,13 @@ h3 {
     font-size: 18px;
     padding: 11px 0 15px 0px;
     margin-bottom: 15px;
-    margin-top: 50px;
+    margin-top: 47px;
     letter-spacing: 0.7px;
     -webkit-box-shadow: 0 -3px #b2f1be inset;
             box-shadow: 0 -3px #b2f1be inset; }
+    @media (max-width: 850px) {
+      .block-text__btn {
+        margin: 47px auto; } }
   .block-text__btn--main {
     -webkit-box-shadow: 0 -2px #59ba88 inset;
             box-shadow: 0 -2px #59ba88 inset; }
@@ -229,6 +256,9 @@ h3 {
       letter-spacing: 0.7px;
       -webkit-box-shadow: 0 -3px #b2f1be inset;
               box-shadow: 0 -3px #b2f1be inset; }
+      @media (max-width: 1020px) {
+        .block-text-item__btn {
+          margin: auto; } }
 
 .block-book {
   display: -webkit-box;
@@ -291,12 +321,24 @@ h3 {
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
+          justify-content: space-between; }
+  @media (max-width: 850px) {
+    .block-author {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: reverse;
+          -ms-flex-direction: column-reverse;
+              flex-direction: column-reverse;
+      text-align: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; } }
 
 .block-ava {
   position: relative; }
+  @media (max-width: 850px) {
+    .block-ava {
+      max-width: 356px;
+      margin: 0 auto; } }
   .block-ava__svg {
     position: absolute;
     z-index: -1;
@@ -396,6 +438,10 @@ h3 {
       margin-top: 25px;
       -webkit-column-gap: 19px;
               column-gap: 19px; }
+      @media (max-width: 630px) {
+        .block-about-table__list {
+          -webkit-column-count: 1;
+                  column-count: 1; } }
       .block-about-table__list > li {
         position: relative;
         padding-left: 37px;
@@ -503,6 +549,18 @@ h3 {
       top: 50px;
       letter-spacing: 0.9px;
       color: #fff; }
+      @media (max-width: 1020px) {
+        .block-product-demo__title {
+          margin: 0 auto;
+          width: 80%; } }
+      @media (max-width: 700px) {
+        .block-product-demo__title {
+          margin: 0 auto;
+          width: 70%; } }
+      @media (max-width: 500px) {
+        .block-product-demo__title {
+          margin: 0 auto;
+          width: 50%; } }
       .block-product-demo__title span {
         font-size: 12px;
         font-family: 'Open Sans', sans-serif;
@@ -520,6 +578,22 @@ h3 {
       left: 118px;
       bottom: 16px;
       letter-spacing: 0.7px; }
+      @media (max-width: 1200px) {
+        .block-product-demo__author {
+          margin: 0 auto;
+          width: 80%; } }
+      @media (max-width: 1020px) {
+        .block-product-demo__author {
+          margin: 0 auto;
+          width: 68%; } }
+      @media (max-width: 700px) {
+        .block-product-demo__author {
+          margin: 0 auto;
+          width: 60%; } }
+      @media (max-width: 500px) {
+        .block-product-demo__author {
+          margin: 0 auto;
+          width: 45%; } }
   .block-product-text {
     margin-top: 36px;
     margin-bottom: 30px; }
@@ -560,30 +634,33 @@ h3 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: 84px; }
-  @media (max-width: 900px) {
+  @media (max-width: 1050px) {
     .block-blog {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column;
-      min-width: 600px;
       margin: 85px auto 0;
       text-align: center; } }
   .block-blog-item {
     -ms-flex-preferred-size: 32%;
-        flex-basis: 32%; }
+        flex-basis: 32%;
+    position: relative; }
     @media (max-width: 900px) {
       .block-blog-item {
-        margin-bottom: 40px; } }
+        margin-bottom: 40px;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%; } }
   .block-blog h4 {
     font-size: 18px;
     margin-top: 16px;
     margin-bottom: 4px;
     letter-spacing: 1px; }
   .block-blog-img {
-    width: 100%;
-    height: 224px;
-    /*         overflow: hidden; Якщо картинка велика чи різного розміру, то позиціюється так
+    margin: 0 auto;
+    /*        width: 100%;
+           height: 224px; */
+    /*         overflow: hidden; /* Якщо картинка велика чи різного розміру, то позиціюється так 
             position: relative;
             img {
                 width: 369px;
@@ -596,9 +673,9 @@ h3 {
             } */ }
   .block-blog-info {
     font-size: 15px;
-    /*  display: flex;
-     justify-content: flex-start;
-     letter-spacing: 0.8px; */
+    /*         display: flex;
+            justify-content: flex-start; */
+    letter-spacing: 0.8px;
     margin-bottom: 12px; }
     .block-blog-info__link {
       display: inline; }
@@ -612,6 +689,12 @@ h3 {
     font-size: 15px;
     font-family: 'Open Sans', sans-serif;
     letter-spacing: 0.7px; }
+  @media (max-width: 1050px) {
+    .block-blog {
+      max-width: 700px; } }
+  @media (max-width: 700px) {
+    .block-blog {
+      max-width: 400px; } }
   .block-blog + .page__btn {
     display: block;
     margin: 84px auto 0;
@@ -644,7 +727,11 @@ h3 {
     font-weight: 700;
     margin-bottom: 25px;
     letter-spacing: 2px;
-    margin-top: 2px; }
+    margin-top: 2px;
+    line-height: 1.1; }
+    @media (max-width: 1020px) {
+      .block-letter__title {
+        font-size: 38px; } }
   .block-letter__text {
     font-size: 15px;
     font-family: 'Open Sans', sans-serif;
@@ -702,11 +789,24 @@ h3 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; }
+  @media (max-width: 600px) {
+    .block-footer {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      margin: 0 auto; } }
   .block-footer-item {
     -ms-flex-preferred-size: 30%;
         flex-basis: 30%;
     margin: 0 -90px;
     /* При такому маргіні немає зміщення при звуженні (..) */ }
+    @media (max-width: 1020px) {
+      .block-footer-item {
+        margin: 0 0; } }
     .block-footer-item:first-child {
       margin: 0; }
   .block-footer__logo {
