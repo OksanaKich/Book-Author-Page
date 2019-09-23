@@ -293,7 +293,7 @@ h3 {
     @media (max-width: 440px) {
       .block-book-demo {
         margin: 0 auto;
-        margin-left: -50px; } }
+        margin-left: -60px; } }
     .block-book-demo__title {
       font-size: 36px;
       text-transform: uppercase;
